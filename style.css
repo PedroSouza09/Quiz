@@ -14,14 +14,21 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-  background: linear-gradient(90deg, rgb(53, 53, 53) 0%, rgb(196, 1, 1) 100%);
+  /* background: linear-gradient(90deg, #353535 0%, #141e33 100%); */
+  /* background: linear-gradient(to right, #8a35c8, #18c063, #00eea2); */
+  /* background: linear-gradient(to right, #5a189a, #9d4edd, #e0aaff); */
+  background: linear-gradient(to right, #0f172a, #141e33, #293c64);
+  background-size: 180% 180%;
+  animation: gradient-animation 5s ease infinite;
 }
 
 body h2 {
   color: white;
+  border-bottom: 3px solid white;
 }
 
 main {
+  font-size: 20px;
   background-color: white;
   padding: 10px;
   border-radius: 10px;
@@ -51,14 +58,15 @@ main {
 }
 
 button {
+  font-size: 19px;
   width: 100%;
   text-align: start;
   padding: 5px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #008CCC;
-  color: white;
+  background-color: #65ffc3;
+  color: black;
 }
 
 .finish {
@@ -69,4 +77,18 @@ button {
 
 .finish button {
   text-align: center;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
